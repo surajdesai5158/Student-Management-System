@@ -1,6 +1,6 @@
 
 import { Navigate } from "react-router-dom";
-const ProtectedRoute = ({children, role}) => {
+const ProtectedRoute1 = ({children, role}) => {
   const token = localStorage.getItem("token");
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -10,4 +10,4 @@ const ProtectedRoute = ({children, role}) => {
   return children;
 };
 
-export default ProtectedRoute;
+export default ProtectedRoute1;

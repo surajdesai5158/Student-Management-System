@@ -23,9 +23,9 @@ import AdminContact from './components/adminLayout/AdminContact';
 import AdminDashboard from './components/adminLayout/AdminDashboard';
 import AdminStudents from './components/adminLayout/AdminStudents';
 import AdminProfile from './components/adminLayout/AdminProfile';
-import ProtectedRoute from './routes/ProtectedRoute';
 import AdminFaculty from './components/adminLayout/AdminFaculty';
 import UserFaculty from './components/userLayout/UserFaculty';
+import ProtectedRoute1 from './routes/ProtectedRoute';
 
 
 
@@ -55,10 +55,10 @@ function App() {
 
       
      <Route path='/user' element={
-      <ProtectedRoute role="user">
+      <ProtectedRoute1 role="user">
         
         <UserLayout/>
-      </ProtectedRoute>}>
+      </ProtectedRoute1>}>
       
       <Route index element={<UserHome/>}/>
 
@@ -75,9 +75,9 @@ function App() {
 
 
       <Route path="/admin" element={
-        <ProtectedRoute role="admin">
+        <ProtectedRoute1 role="admin">
           <AdminLayout/>
-        </ProtectedRoute>
+        </ProtectedRoute1>
         }>
           <Route index element={<AdminDashboard/>}/>
         <Route path='/admin/courses' element={<AdminCourses/>}/>
